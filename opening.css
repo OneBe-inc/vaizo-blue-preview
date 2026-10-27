@@ -15,9 +15,26 @@
 .opening-copy{display:flex;align-items:center;justify-content:center;gap:clamp(8px,2vw,32px);margin:0;padding:0 20px 4vh;white-space:nowrap}
 .opening-word{display:flex;align-items:center;justify-content:center;flex:none;width:2.3em;height:1.6em;font-size:clamp(76px,13vw,190px);font-family:'Noto Sans JP',sans-serif;font-weight:900;line-height:1;letter-spacing:0;font-synthesis:none}
 .opening-rest{font-size:clamp(30px,5.2vw,76px);font-weight:700;letter-spacing:.015em;line-height:1.4}
-.opening-caption{position:absolute;left:0;right:0;bottom:16%;text-align:center;font-size:10px;font-weight:600;letter-spacing:.18em}
+
 .opening-skip{position:absolute;bottom:35px;right:48px;display:flex;align-items:center;gap:22px;border:0;border-bottom:1px solid currentColor;padding:10px 0;background:none;color:inherit;font-size:12px;font-weight:600}
 .opening-skip:hover{opacity:.65}
-@media(max-width:600px){.opening-logo{top:30px;left:26px;width:100px}.opening-copy{gap:4px;padding:0 12px 4vh}.opening-word{font-size:clamp(58px,19vw,110px);width:2.18em}.opening-rest{font-size:clamp(23px,6.5vw,39px);letter-spacing:0}.opening-caption{font-size:8px;letter-spacing:.1em;bottom:22%}.opening-skip{bottom:28px;right:26px}}
-@media(max-height:450px){.opening-word{font-size:25svh}.opening-rest{font-size:10svh}.opening-caption{bottom:14%}.opening-logo{top:20px}.opening-skip{bottom:15px}}
+@media(max-width:600px){.opening-logo{top:30px;left:26px;width:100px}.opening-copy{gap:4px;padding:0 12px 4vh}.opening-word{font-size:clamp(58px,19vw,110px);width:2.18em}.opening-rest{font-size:clamp(23px,6.5vw,39px);letter-spacing:0}.opening-skip{bottom:28px;right:26px}}
+@media(max-height:450px){.opening-word{font-size:25svh}.opening-rest{font-size:10svh}.opening-logo{top:20px}.opening-skip{bottom:15px}}
 @media(prefers-reduced-motion:reduce){.opening{display:none;transition:none}.is-opening{overflow:visible}}
+
+@font-face{font-family:Suki8;src:url(assets/fonts/suki-8.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki9;src:url(assets/fonts/suki-9.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki10;src:url(assets/fonts/suki-10.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki11;src:url(assets/fonts/suki-11.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki12;src:url(assets/fonts/suki-12.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki13;src:url(assets/fonts/suki-13.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki14;src:url(assets/fonts/suki-14.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki15;src:url(assets/fonts/suki-15.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki16;src:url(assets/fonts/suki-16.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:Suki17;src:url(assets/fonts/suki-17.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki18;src:url(assets/fonts/suki-18.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki19;src:url(assets/fonts/suki-19.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki20;src:url(assets/fonts/suki-20.woff2) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:Suki21;src:url(assets/fonts/suki-21.woff2) format("woff2");font-weight:800;font-display:swap}
+@font-face{font-family:Suki22;src:url(assets/fonts/suki-22.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki23;src:url(assets/fonts/suki-23.woff2) format("woff2");font-weight:400;font-display:swap}

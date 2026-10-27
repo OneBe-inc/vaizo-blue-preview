@@ -37,8 +37,8 @@
   motion.addEventListener('change', finish);
   endTimer = setTimeout(finish, 2850);
 
-  // Two-character subsets: eight genuinely different faces, under 9 KiB total.
-  const weights = [400, 900, 900, 400, 700, 400, 400, 400];
+  // Two-character subsets: 24 different faces, self-hosted to keep loading light.
+  const weights = [400, 900, 900, 400, 700, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 400, 600, 400, 400, 400, 800, 800, 400, 400];
   const ready = [];
   weights.forEach((weight, index) => {
     document.fonts.load(`${weight} 100px Suki${index}`, 'スキ').then(faces => {
@@ -65,7 +65,7 @@
     }
     count++;
     // Hold the final face briefly before revealing the page.
-    if (count < 10) timer = setTimeout(changeFont, count > 7 ? 300 : 230);
+    if (count < 20) timer = setTimeout(changeFont, count > 15 ? 150 : 115);
   }
-  timer = setTimeout(changeFont, 180);
+  timer = setTimeout(changeFont, 90);
 })();

@@ -32,3 +32,11 @@
 - PASS (isolated JavaScript lifecycle checks with controlled clocks): 10 font changes, all 8 different fonts in the first cycle, no consecutive repeats; default completion, skip, Escape, tab hiding, reduced-motion and font failure all release the page and clear timers. These checks are not device performance measurements.
 - NOT_TESTED: OS reduced-motion end-to-end, cold 3-run Lighthouse / LCP / CLS / TBT, exact mobile viewport measurements (browser connection timed out). No performance-score claim.
 - Performance scope: ordinary static site with short requested opening; existing hero images / CTA unchanged. Video / WebGL N/A. No-JS shows the page immediately; hash navigation bypasses opening. Closing/hidden tab finishes the animation, does not replay on bfcache restore.
+
+
+## 2026-10-27 — 24 faces / double speed / caption removed
+- User revision: font pool 8 → 24; normal interval 230 → 115 ms, closing interval 300 → 150 ms; first change 180 → 90 ms. 20 changes per opening, randomized from 24 faces. Overall duration remains 2,850 ms plus fade; all 24 need not appear in one visit.
+- Removed the English opening caption from HTML and removed its CSS.
+- Font subsets: 27,284 bytes total for 24 WOFF2 files; licenses recorded beside each family.
+- PASS: controlled-clock execution checks 24 font requests, 20 distinct faces with no repeats in the first sequence, 115/150 ms intervals, 2,850 ms completion, reduced-motion skip and font-failure cleanup. Syntax check and 24 WOFF2 signatures passed.
+- NOT_TESTED: new live browser visual pass; browser connection timed out before attachment. Previous layout is unchanged apart from caption removal. This is not a browser performance measurement.
