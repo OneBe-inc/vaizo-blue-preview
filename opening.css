@@ -1,0 +1,23 @@
+@font-face{font-family:Suki0;src:url(assets/fonts/suki-0.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki1;src:url(assets/fonts/suki-1.woff2) format("woff2");font-weight:900;font-display:swap}
+@font-face{font-family:Suki2;src:url(assets/fonts/suki-2.woff2) format("woff2");font-weight:900;font-display:swap}
+@font-face{font-family:Suki3;src:url(assets/fonts/suki-3.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki4;src:url(assets/fonts/suki-4.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:Suki5;src:url(assets/fonts/suki-5.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki6;src:url(assets/fonts/suki-6.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Suki7;src:url(assets/fonts/suki-7.woff2) format("woff2");font-weight:400;font-display:swap}
+
+/* Keep the sentence anchored as the character shapes change. */
+.opening{position:fixed;inset:0;z-index:200;background:var(--light,#fafaf7);color:var(--blue,#1955e7);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .45s ease,visibility 0s .45s}
+.is-opening .opening{opacity:1;visibility:visible;pointer-events:auto;transition:none}
+.is-opening{overflow:hidden}
+.opening-logo{position:absolute;top:45px;left:48px;width:120px;mix-blend-mode:multiply}
+.opening-copy{display:flex;align-items:center;justify-content:center;gap:clamp(8px,2vw,32px);margin:0;padding:0 20px 4vh;white-space:nowrap}
+.opening-word{display:flex;align-items:center;justify-content:center;flex:none;width:2.3em;height:1.6em;font-size:clamp(76px,13vw,190px);font-family:'Noto Sans JP',sans-serif;font-weight:900;line-height:1;letter-spacing:0;font-synthesis:none}
+.opening-rest{font-size:clamp(30px,5.2vw,76px);font-weight:700;letter-spacing:.015em;line-height:1.4}
+.opening-caption{position:absolute;left:0;right:0;bottom:16%;text-align:center;font-size:10px;font-weight:600;letter-spacing:.18em}
+.opening-skip{position:absolute;bottom:35px;right:48px;display:flex;align-items:center;gap:22px;border:0;border-bottom:1px solid currentColor;padding:10px 0;background:none;color:inherit;font-size:12px;font-weight:600}
+.opening-skip:hover{opacity:.65}
+@media(max-width:600px){.opening-logo{top:30px;left:26px;width:100px}.opening-copy{gap:4px;padding:0 12px 4vh}.opening-word{font-size:clamp(58px,19vw,110px);width:2.18em}.opening-rest{font-size:clamp(23px,6.5vw,39px);letter-spacing:0}.opening-caption{font-size:8px;letter-spacing:.1em;bottom:22%}.opening-skip{bottom:28px;right:26px}}
+@media(max-height:450px){.opening-word{font-size:25svh}.opening-rest{font-size:10svh}.opening-caption{bottom:14%}.opening-logo{top:20px}.opening-skip{bottom:15px}}
+@media(prefers-reduced-motion:reduce){.opening{display:none;transition:none}.is-opening{overflow:visible}}

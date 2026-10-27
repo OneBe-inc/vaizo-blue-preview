@@ -22,3 +22,13 @@
 配信画像24件合計約446KiB、JS約1.4KiB、CSS約20KiB（ファイルサイズ、通信量ではない）。外部フォントの実転送は未計測。本文・CTAは初回HTML、下部画像lazy、FV写真は即時取得。トラッキング・フォーム送信なし。
 
 デモとして公開。写真は生成したイメージで、ニュースやメッセージも確認用原稿を含む。問い合わせ等の外部リンクはVAIZO公式ページへ接続。公式サイトは更新していない。
+
+
+## 2026-10-27 — 「スキに没頭する」 opening
+- User-requested opening: off-white canvas / blue sentence; only スキ changes among 8 actual fonts in a randomized, non-repeating bag. 10 changes across about 2.85s + 0.45s fade; HTML guard releases the page at 4s if initialization fails. Existing content stays native HTML.
+- Added font payload: 8,948 bytes total (two-character WOFF2 subsets), self-hosted; individual OFL licenses retained. No animation library, video, or tracking added. Font requests begin only while the opening is active.
+- PASS (Chrome local): wide and narrow opening screenshots visually inspected; the second half of the sentence stays aligned. Narrow test used viewport override 390×844 with existing local browser zoom.
+- PASS (Chrome local): skip button exits, releases all 6 inert page siblings, and restores focus to the brand link. Actual normal-speed trace observed 5 distinct faces; all 8 fonts loaded. Automatic completion reached non-opening state with 0 inert elements. Browser scheduling delays reached the 4s safeguard during this trace.
+- PASS (isolated JavaScript lifecycle checks with controlled clocks): 10 font changes, all 8 different fonts in the first cycle, no consecutive repeats; default completion, skip, Escape, tab hiding, reduced-motion and font failure all release the page and clear timers. These checks are not device performance measurements.
+- NOT_TESTED: OS reduced-motion end-to-end, cold 3-run Lighthouse / LCP / CLS / TBT, exact mobile viewport measurements (browser connection timed out). No performance-score claim.
+- Performance scope: ordinary static site with short requested opening; existing hero images / CTA unchanged. Video / WebGL N/A. No-JS shows the page immediately; hash navigation bypasses opening. Closing/hidden tab finishes the animation, does not replay on bfcache restore.
