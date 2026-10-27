@@ -1,4 +1,5 @@
 github-api.cjs
 prepare-assets.cjs
+accessibility-fix.cjs
 qa/
 node_modules/
